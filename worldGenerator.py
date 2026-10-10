@@ -27,28 +27,28 @@ os.makedirs("json",  exist_ok=True)
 
 #  BIOMAS
 BIOMES = {
-    "Oceano Profundo":      {"color": "#0c1e36", "h": (0.0,  0.2),  "r": (0.0,  0.4),  "score": -1.0, "cost": 999},
-    "Oceano Raso":          {"color": "#1e4e72", "h": (0.0,  0.2),  "r": (0.4,  1.01), "score": -1.0, "cost": 999},
-    "Praia":                {"color": "#b8a882", "h": (0.2,  0.25), "r": (0.0,  1.01), "score": 2.0,  "cost": 1},
-    "Deserto":              {"color": "#a08050", "h": (0.3,  0.6),  "r": (0.0,  0.2),  "score": -1.0, "cost": 2},
-    "Caatinga":             {"color": "#806040", "h": (0.3,  0.6),  "r": (0.2,  0.3),  "score": 1.0,  "cost": 1},
-    "Cerrado":              {"color": "#6a7038", "h": (0.3,  0.6),  "r": (0.3,  0.45), "score": 3.0,  "cost": 1},
-    "Planície":             {"color": "#507038", "h": (0.3,  0.6),  "r": (0.45, 0.6),  "score": 3.0,  "cost": 1},
-    "Pantanal":             {"color": "#2e5048", "h": (0.3,  0.6),  "r": (0.6,  0.8),  "score": 1.0,  "cost": 3},
-    "Floresta Tropical":    {"color": "#1e4820", "h": (0.3,  0.6),  "r": (0.8,  1.01), "score": 1.0,  "cost": 1},
-    "Planalto Seco":        {"color": "#8a6840", "h": (0.6,  0.85), "r": (0.0,  0.2),  "score": 1.0,  "cost": 1},
-    "Planície Árida":       {"color": "#705840", "h": (0.6,  0.85), "r": (0.2,  0.5),  "score": 1.0,  "cost": 1},
-    "Floresta Temperada":   {"color": "#2e5430", "h": (0.6,  0.85), "r": (0.5,  0.7),  "score": 3.0,  "cost": 1},
-    "Taiga":                {"color": "#243828", "h": (0.6,  0.85), "r": (0.7,  1.01), "score": 1.0,  "cost": 2},
-    "Tundra":               {"color": "#7a9aaa", "h": (0,    1),    "r": (0,    1),    "score": -1.0, "cost": 2},
-    "Montanha Árida":       {"color": "#505058", "h": (0.85, 1.01), "r": (0.0,  0.3),  "score": -1.0, "cost": 8},
-    "Montanha":             {"color": "#606070", "h": (0.85, 1.01), "r": (0.3,  0.6),  "score": -1.0, "cost": 8},
-    "Montanha com Floresta":{"color": "#3e5040", "h": (0.85, 1.01), "r": (0.6,  1.01), "score": -1.0, "cost": 8},
-    "Mangue Tropical":      {"color": "#1e3028", "h": (0.25, 0.3),  "r": (0.6,  1.01), "score": 1.0,  "cost": 3},
+    "Oceano Profundo": {"color": "#0c1e36", "h": (0.0, 0.2), "r": (0.0, 0.4), "score": -1.0, "cost": 999},
+    "Oceano Raso": {"color": "#1e4e72", "h": (0.0, 0.2),  "r": (0.4, 1.01), "score": -1.0, "cost": 999},
+    "Praia": {"color": "#b8a882", "h": (0.2, 0.25), "r": (0.0, 1.01), "score": 2.0, "cost": 1},
+    "Deserto": {"color": "#a08050", "h": (0.3, 0.6), "r": (0.0, 0.2), "score": -1.0, "cost": 2},
+    "Caatinga": {"color": "#806040", "h": (0.3, 0.6), "r": (0.2, 0.3), "score": 1.0, "cost": 1},
+    "Cerrado": {"color": "#6a7038", "h": (0.3, 0.6), "r": (0.3, 0.45), "score": 3.0, "cost": 1},
+    "Planície": {"color": "#507038", "h": (0.3, 0.6), "r": (0.45, 0.6), "score": 3.0, "cost": 1},
+    "Pantanal": {"color": "#2e5048", "h": (0.3, 0.6), "r": (0.6, 0.8), "score": 1.0, "cost": 3},
+    "Floresta Tropical": {"color": "#1e4820", "h": (0.3,0.6), "r": (0.8, 1.01), "score": 1.0,  "cost": 1},
+    "Planalto Seco": {"color": "#8a6840", "h": (0.6, 0.85), "r": (0.0, 0.2), "score": 1.0, "cost": 1},
+    "Planície Árida": {"color": "#705840", "h": (0.6, 0.85), "r": (0.2, 0.5), "score": 1.0, "cost": 1},
+    "Floresta Temperada": {"color": "#2e5430", "h": (0.6, 0.85), "r": (0.5, 0.7), "score": 3.0,  "cost": 1},
+    "Taiga": {"color": "#243828", "h": (0.6, 0.85), "r": (0.7, 1.01), "score": 1.0, "cost": 2},
+    "Tundra": {"color": "#7a9aaa", "h": (0, 1), "r": (0, 1), "score": -1.0, "cost": 2},
+    "Montanha Árida": {"color": "#505058", "h": (0.85, 1.01), "r": (0.0,  0.3),  "score": -1.0, "cost": 8},
+    "Montanha": {"color": "#606070", "h": (0.85, 1.01), "r": (0.3, 0.6),  "score": -1.0, "cost": 8},
+    "Montanha com Floresta": {"color": "#3e5040", "h": (0.85, 1.01), "r": (0.6, 1.01), "score": -1.0, "cost": 8},
+    "Mangue Tropical": {"color": "#1e3028", "h": (0.25, 0.3),  "r": (0.6, 1.01), "score": 1.0,  "cost": 3},
 }
 
 BIOMES_HABITAVEIS = {name for name, data in BIOMES.items() if data["score"] > 0}
-BIOMES_AGUA       = {name for name, data in BIOMES.items() if data["cost"] == 999}
+BIOMES_AGUA = {name for name, data in BIOMES.items() if data["cost"] == 999}
 
 #  FILTROS DE IMAGEM
 def mode_filter_rgb(img):
@@ -69,8 +69,7 @@ def small_blur_rgb(img):
     h, w, _ = img.shape
     out = np.zeros_like(img)
     for y in range(h):
-        for x in range(w):
-            out[y, x] = np.tensordot(padded[y:y+3, x:x+3], kernel, axes=([0,1],[0,1]))
+        for x in range(w): out[y, x] = np.tensordot(padded[y:y+3, x:x+3], kernel, axes=([0,1],[0,1]))
     return out
 
 #  RUÍDO
@@ -84,8 +83,7 @@ def smooth_noise(shape, scale=10):
     for i in range(shape[0]):
         v00 = base[x0[i],   y0];  v10 = base[x0[i]+1, y0]
         v01 = base[x0[i],   y0+1]; v11 = base[x0[i]+1, y0+1]
-        smooth[i] = (v00*(1-xf[i])*(1-yf) + v10*xf[i]*(1-yf) +
-                     v01*(1-xf[i])*yf      + v11*xf[i]*yf)
+        smooth[i] = (v00*(1-xf[i])*(1-yf) + v10*xf[i]*(1-yf) + v01*(1-xf[i])*yf + v11*xf[i]*yf)
     return smooth
 
 def smooth_biomes(biomes):
@@ -101,15 +99,13 @@ def smooth_biomes(biomes):
 #  BIOMAS
 def get_biome(h, r):
     for name, data in BIOMES.items():
-        if data["h"][0] <= h < data["h"][1] and data["r"][0] <= r < data["r"][1]:
-            return name
+        if data["h"][0] <= h < data["h"][1] and data["r"][0] <= r < data["r"][1]: return name
     return "Planície"
 
 def build_biome_map(world_height, world_rain):
     biomes = np.full((height, width), '', dtype=object)
     for y in range(height):
-        for x in range(width):
-            biomes[y, x] = get_biome(world_height[y, x], world_rain[y, x])
+        for x in range(width): biomes[y, x] = get_biome(world_height[y, x], world_rain[y, x])
     lat  = np.linspace(0, 1, height).reshape(-1, 1)
     cold = (lat < 0.05) | (lat > 0.95)
     biomes[cold & (world_height > 0.5)] = "Tundra"
@@ -135,8 +131,7 @@ def place_settlements(scores, n, min_dist):
     placed = []
     for _, y, x in pool:
         if len(placed) >= n: break
-        if not any(abs(y-py) + abs(x-px) < min_dist for py, px in placed):
-            placed.append((y, x))
+        if not any(abs(y-py) + abs(x-px) < min_dist for py, px in placed): placed.append((y, x))
     return placed
 
 #  ESTRADAS — A*
@@ -188,8 +183,7 @@ def build_base_rgb(biomes):
     color_lookup = {name: np.array(mcolors.to_rgb(data["color"])) for name, data in BIOMES.items()}
     rgb = np.zeros((height, width, 3), dtype=float)
     for y in range(height):
-        for x in range(width):
-            rgb[y, x] = color_lookup.get(biomes[y, x], np.zeros(3))
+        for x in range(width): rgb[y, x] = color_lookup.get(biomes[y, x], np.zeros(3))
     rgb = mode_filter_rgb(rgb)
     rgb = small_blur_rgb(rgb)
     return rgb
@@ -271,8 +265,7 @@ def draw_villages(ax, villages):
     for vy, vx in villages:
         px, py = hex_to_plot(vy, vx)
         ax.plot(px, py, 'o', color="#c8902a", markersize=5.5, alpha=0.25, zorder=4)
-        ax.plot(px, py, 'o', color="#b07820", markersize=3.0,
-                markeredgecolor="#5a3a08", markeredgewidth=0.5, zorder=5, alpha=0.95)
+        ax.plot(px, py, 'o', color="#b07820", markersize=3.0, markeredgecolor="#5a3a08", markeredgewidth=0.5, zorder=5, alpha=0.95)
 
 def draw_cities(ax, cities):
     for cy, cx in cities:
@@ -346,8 +339,7 @@ def save_map_json(filename_map, seed, cities, villages, roads, biomes, timestamp
     }
 
     json_path = "json/" + os.path.splitext(os.path.basename(filename_map))[0] + ".json"
-    with open(json_path, "w", encoding="utf-8") as f:
-        json.dump(data, f, ensure_ascii=False, indent=2)
+    with open(json_path, "w", encoding="utf-8") as f: json.dump(data, f, ensure_ascii=False, indent=2)
     return json_path
 
 #  GERAÇÃO DO MUNDO
@@ -356,9 +348,9 @@ for i in range(NUM_MAPAS):
     np.random.seed(seed)
     print(f"Gerando mapa {i+1}/{NUM_MAPAS}  (seed={seed})...")
 
-    # ── Ruído base ──────────────────────────────
+    # Ruído base
     world_height = smooth_noise((height, width), scale=10)
-    world_rain   = smooth_noise((height, width), scale=15)
+    world_rain = smooth_noise((height, width), scale=15)
 
     for arr in (world_height, world_rain):
         arr[:] = (arr - arr.min()) / (arr.max() - arr.min())
@@ -378,7 +370,7 @@ for i in range(NUM_MAPAS):
     world_height[coast] *= 0.92
     world_rain[coast]   *= 1.04
 
-    # ── Rios ────────────────────────────────────
+    # Rios
     river_map = np.zeros((height, width))
     for _ in range(15000):
         y = np.random.randint(1, height-1)
@@ -393,13 +385,12 @@ for i in range(NUM_MAPAS):
             if ymin == y and xmin == x: break
             y, x = ymin, xmin
             river_map[y, x] += 1
-    if river_map.max() > 0:
-        river_map /= river_map.max()
+    if river_map.max() > 0: river_map /= river_map.max()
 
-    # ── Biomas ──────────────────────────────────
+    #  Biomas 
     biomes = build_biome_map(world_height, world_rain)
 
-    # ── Assentamentos & Estradas ─────────────────
+    #  Assentamentos & Estradas 
     print("  Calculando assentamentos e estradas...")
     scores = calc_scores(biomes, river_map)
     n_cidades = np.random.randint(*NUM_CIDADES)
@@ -409,11 +400,11 @@ for i in range(NUM_MAPAS):
     villages = [v for v in village_candidates if v not in cities][:n_vilas]
     roads = build_roads(cities, villages, biomes) if len(cities) >= 2 else []
 
-    # ── Pipeline de cor ──────────────────────────
+    #  Pipeline de cor
     print("  Renderizando cores...")
     rgb_map = build_color_map(biomes, world_height, river_map)
 
-    # ── Desenho ──────────────────────────────────
+    #  Desenho
     fig, ax = setup_figure()
     draw_hexes(ax, rgb_map)
     draw_roads(ax, roads)
@@ -423,10 +414,10 @@ for i in range(NUM_MAPAS):
     draw_border(ax)
 
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    filename  = finalize_and_save(fig, ax, i, timestamp)
+    filename = finalize_and_save(fig, ax, i, timestamp)
 
     json_path = save_map_json(filename, seed, cities, villages, roads, biomes, timestamp)
 
-    print(f"  ✓ Mapa salvo em {filename}")
-    print(f"  ✓ JSON salvo em {json_path}")
-    print(f"     {len(cities)} cidades · {len(villages)} vilas · {len(roads)} estradas")
+    print(f"✓ Mapa salvo em {filename}")
+    print(f"✓ JSON salvo em {json_path}")
+    print(f"{len(cities)} cidades · {len(villages)} vilas · {len(roads)} estradas")
