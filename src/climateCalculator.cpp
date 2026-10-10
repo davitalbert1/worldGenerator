@@ -12,10 +12,9 @@
 #include "BiomeDef.h"
 #include "SimpleJson.h"
 #include "PerlinNoise.h"
+#include "config.h"
 
 namespace fs = std::filesystem;
-
-static const double PI = 3.14159265358979323846;
 
 struct ClimateParams {
     // Parâmetros Gerais
@@ -187,7 +186,7 @@ void calculateClimate(ClimateGrid& grid, const ClimateParams& params) {
         // Latitude varia de -90° (Sul/y=0) até +90° (Norte/y=h-1). Equador no centro (y = h/2).
         double latNorm = std::abs((y - (h / 2.0)) / (h / 2.0)); // 0.0 no equador, 1.0 nos polos
         // Gradiente de insolação solar (seno / cosseno solar)
-        double insolation = std::cos(latNorm * (PI / 2.0)); // 1.0 no equador, 0.0 no polo
+        double insolation = std::cos(latNorm * (Config::PI / 2.0)); // 1.0 no equador, 0.0 no polo
         double baseTemp = params.temp_polos + (params.temp_equador - params.temp_polos) * insolation;
 
         for (int x = 0; x < w; ++x) {
@@ -219,15 +218,15 @@ void calculateClimate(ClimateGrid& grid, const ClimateParams& params) {
         // 0.66 - 1.0 (Polares de Leste para Oeste -> U < 0)
         double uWind = 0.0;
         if (absLat < 0.33) {
-            uWind = -std::sin(absLat / 0.33 * PI); // Alísios soprando para oeste
+            uWind = -std::sin(absLat / 0.33 * Config::PI); // Alísios soprando para oeste
         } else if (absLat < 0.66) {
-            uWind = std::sin((absLat - 0.33) / 0.33 * PI); // Ventos do oeste
+            uWind = std::sin((absLat - 0.33) / 0.33 * Config::PI); // Ventos do oeste
         } else {
-            uWind = -std::sin((absLat - 0.66) / 0.34 * PI); // Ventos polares
+            uWind = -std::sin((absLat - 0.66) / 0.34 * Config::PI); // Ventos polares
         }
 
         // Vento meridional (norte-sul) devido a convecção
-        double vWind = (latRel >= 0) ? -0.3 * std::sin(absLat * PI) : 0.3 * std::sin(absLat * PI);
+        double vWind = (latRel >= 0) ? -0.3 * std::sin(absLat * Config::PI) : 0.3 * std::sin(absLat * Config::PI);
 
         for (int x = 0; x < w; ++x) {
             ClimateCell& c = grid.at(y, x);

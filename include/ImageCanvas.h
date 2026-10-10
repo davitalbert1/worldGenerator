@@ -1,5 +1,5 @@
 #pragma once
-
+#include "config.h"
 #include <string>
 #include <vector>
 #include <cstdint>
@@ -151,10 +151,10 @@ public:
 
     void drawStar(double cx, double cy, double rOuter, double rInner, int points, ColorRGB color, double alpha = 1.0) {
         std::vector<std::pair<double, double>> poly;
-        double angleStep = 3.14159265358979323846 / points;
+        double angleStep = Config::PI / points;
         for (int i = 0; i < 2 * points; ++i) {
             double r = (i % 2 == 0) ? rOuter : rInner;
-            double a = i * angleStep - 3.14159265358979323846 / 2.0;
+            double a = i * angleStep - Config::PI / 2.0;
             poly.push_back({cx + r * std::cos(a), cy + r * std::sin(a)});
         }
         drawFilledPolygon(poly, color, alpha);

@@ -14,11 +14,9 @@
 #include "BiomeDef.h"
 #include "PerlinNoise.h"
 #include "SimpleJson.h"
+#include "config.h"
 
 namespace fs = std::filesystem;
-
-// Constantes e Parâmetros Padrão
-static const double PI = 3.14159265358979323846;
 
 struct MapConfig {
     int width = 100;
@@ -378,7 +376,7 @@ std::vector<ColorRGB> buildColorMap(const WorldMap& map, const MapConfig& cfg) {
     smallBlurRGB(baseRgb, w, h);
 
     // Gradiente e Shading
-    double radAng = cfg.angulo_luz_deg * (PI / 180.0);
+    double radAng = cfg.angulo_luz_deg * (Config::PI / 180.0);
     double cosA = std::cos(radAng);
     double sinA = std::sin(radAng);
 
@@ -498,7 +496,7 @@ ImageCanvas renderWorldMap(const WorldMap& map, const std::vector<ColorRGB>& rgb
 
             std::vector<std::pair<double, double>> poly;
             for (int k = 0; k < 6; ++k) {
-                double a = (30.0 + k * 60.0) * (PI / 180.0);
+                double a = (30.0 + k * 60.0) * (Config::PI / 180.0);
                 poly.push_back({cx + radiusCanvas * std::cos(a), cy + radiusCanvas * std::sin(a)});
             }
             ColorRGB cellCol = rgbMap[y * map.width + x];
