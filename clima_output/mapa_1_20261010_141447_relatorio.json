@@ -1,0 +1,48 @@
+{
+  "biomas_resultantes": {
+    "Caatinga": 34,
+    "Cerrado": 48,
+    "Deserto": 2740,
+    "Floresta Temperada": 20,
+    "Floresta Tropical": 246,
+    "Mangue Tropical": 73,
+    "Oceano Profundo": 70,
+    "Oceano Raso": 1077,
+    "Pantanal": 70,
+    "Planície": 13,
+    "Planície Árida": 1498,
+    "Praia": 701,
+    "Taiga": 14,
+    "Tundra": 3396
+  },
+  "parameters": {
+    "forca_vento_base": 28,
+    "taxa_orografica": 0.8800,
+    "temperatura_equador": 30,
+    "temperatura_media_global": 15,
+    "temperatura_polos": -22
+  },
+  "stats": {
+    "chuva_maxima_mm": 3800,
+    "chuva_media_anual_mm": 403.2340,
+    "chuva_minima_mm": 30,
+    "temperatura_maxima": 29.9801,
+    "temperatura_media_calculada": 5.9270,
+    "temperatura_minima": -35.8092,
+    "vento_medio_kmh": 18.9631
+  },
+  "zonas_climaticas": {
+    "Boreal / Subpolar": 1293,
+    "Equatorial Superúmido": 193,
+    "Glacial / Polar": 2772,
+    "Subtropical Semiárido (Mediterrâneo)": 105,
+    "Subtropical Árido (Deserto)": 2001,
+    "Subtropical Úmido": 430,
+    "Temperado Continental": 75,
+    "Temperado Oceânico": 357,
+    "Temperado Árido (Estepe Fria)": 1526,
+    "Tropical Monçônico": 53,
+    "Tropical Semiárido (Savana/Caatinga)": 45,
+    "Tropical Árido (Deserto Quente)": 1150
+  }
+}
